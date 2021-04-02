@@ -10,6 +10,40 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
+            
+            
+            Car car = new Car(2017, "Marcedenz", "Bnz", true);
+            Motorcycle motorcycle = new Motorcycle(2021, "Bike", "Bk", false);
+            
+            Vehicle car1 = new Car(2001, "Toyota", "Camry", true);
+            Vehicle motorcycle1 = new Motorcycle(2018, "Mtbs", "Mt", true);
+
+            //Console.WriteLine(car.Year = 2018);
+            //Console.WriteLine(car.Make = "Toyota");
+            //Console.WriteLine(car.Model = "Camry");
+
+            //Console.WriteLine(motorcycle.Year = 2010);
+            //Console.WriteLine(motorcycle.Make = "BMW");
+            //Console.WriteLine(motorcycle.Model = "BMW CSV");
+
+
+            var vehicles = new List<Vehicle>();
+
+            vehicles.Add(car);
+            vehicles.Add(car1);
+            vehicles.Add(motorcycle);
+            vehicles.Add(motorcycle1);
+
+            
+            foreach (Vehicle item in vehicles)
+            {
+                item.DriveAbstract();
+                item.DriveVirtual();
+            }
+
+            Console.WriteLine($"The number of cars are: {vehicles.Count()}");
+
+
             /*
              * Todo follow all comments!! 
              */
@@ -46,8 +80,8 @@ namespace ConsoleUI
 
             // Call each of the drive methods for one car and one motorcycle
 
-            #endregion            
-            Console.ReadLine();
+            #endregion
+            // Console.ReadLine();
         }
     }
 }
